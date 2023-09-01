@@ -1,7 +1,5 @@
 import { React, useState } from 'react';
-import { Banner } from './components/UI/Banner/Banner';
-import Button from './components/UI/Button/Button';
-import Button from './components/UI/Button/Button';
+import Card from './components/UI/Card/Card';
 import './quizstyle.css'
 
 const App = () => {
