@@ -52,12 +52,7 @@ const App = () => {
     ]
 
     //useState Hook
-    const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [score, setScore] = useState(0);
-    const [showScore, setShowScore] = useState(false);
-    const [showQuiz, setShowQuiz] = useState(false);
-    const [showStart, setShowStart] = useState(false);
-    const [questionsCorrect, setQuestionsCorrect] = useState(0);
+   const [isStart, setIsStart] = useState(false);
 
   const handleResultsButton = () => {
       if(currentQuestion === 5){
@@ -104,48 +99,13 @@ const resetQuiz=()=>
 }
 
     return (
-        <div className='app'>
-        </a>
-            {showScore ? (
-                <div className='score-section'>
-                    <Banner/>
-                    You have answered {score} / {Questionbank.length} Correctly
-                    <>
-                       <Button type="submit" onClick={resetQuiz} text = "Start Quiz"></Button>
-                    </>
-                </div>
-            )
-                : (
-                    <>
-                    <h1>Quizz App</h1>
-                      {!showQuiz && <Button  onClick={() => handleQuizButton()} text = "Start Quiz"></Button>}
-                      {showQuiz && (
-                        <div>
-                        <div className='question-section'>
-                            <div className='question-count'>
-                               <span>{currentQuestion+1}</span>/{Questionbank.length}
-                            </div>
-
-                            <div className='question-text'>
-                             {Questionbank[currentQuestion].Question}
-                            </div>
-                        </div>
-
-                        <div className='answer-section'>
-                          {Questionbank[currentQuestion].Answers.map((answer)=>
-                          (
-                              <button onClick={()=>handleAnswerResponse(answer.isCorrect)}>{answer.Answer}</button>
-                          ))}
-                         <Button>{text()}
-                          </Button>
-                        </div>
-                        
-                         </div>)}
-                    </>
-                )
-            }
-
+       {isStart ?
+        <div>
         </div>
+        :  <div className='app'>
+       <h1>Quizz App</h1>
+       <button>Start Quiz</button>
+    </div>}
     );
 }
 
