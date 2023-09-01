@@ -62,12 +62,12 @@ const App = () => {
     return (
         <div className='app'>
             {isStart ?
-                <div>
-                    <Card question={Questionbank[questions]} />
-                </div>
+                <p>Hello</p>
+                // <Card question={Questionbank[questions]} />
+
                 : <div>
                     <h1>Quizz App</h1>
-                    <button onClick={()=> setIsStart(true)}>Start Quiz</button>
+                    <button onClick={() => alert("eee")}>Start Quiz</button>
                 </div>}
         </div>
     );
