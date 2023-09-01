@@ -1,10 +1,11 @@
 import { React, useState } from 'react';
 import { Banner } from './components/UI/Banner/Banner';
 import Button from './components/UI/Button/Button';
+import Button from './components/UI/Button/Button';
 import './quizstyle.css'
 
 const App = () => {
-    var Questionbank = [
+    const Questionbank = [
         {
             Question: "Who is the father of your nation ?",
             Answers: [
@@ -53,12 +54,13 @@ const App = () => {
 
     //useState Hook
     const [isStart, setIsStart] = useState(false);
+    const [questions, setQuestions] = useState(0);
 
     return (
         <div className='app'>
             {isStart ?
                 <div>
-                    <Card />
+                    <Card question={Questionbank[questions]} />
                 </div>
                 : <div>
                     <h1>Quizz App</h1>
