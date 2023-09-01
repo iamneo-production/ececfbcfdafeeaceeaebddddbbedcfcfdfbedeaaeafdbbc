@@ -7,6 +7,7 @@ import './quizstyle.css'
 const App = () => {
     const Questionbank = [
         {
+            id: 1,
             Question: "Who is the father of your nation ?",
             Answers: [
                 { Answer: "Mahatma Gandhi", isCorrect: true },
@@ -16,6 +17,7 @@ const App = () => {
             ]
         },
         {
+            id: 2,
             Question: "What color is are the leaves?",
             Answers: [
                 { Answer: "Blue", isCorrect: false },
@@ -24,6 +26,7 @@ const App = () => {
                 { Answer: "Green", isCorrect: true }
             ]
         }, {
+            id: 3,
             Question: "What color is the sky ",
             Answers: [
                 { Answer: "Blue", isCorrect: true },
@@ -33,6 +36,7 @@ const App = () => {
             ]
         },
         {
+            id: 4,
             Question: "What color is the sky ?",
             Answers: [
                 { Answer: "Blue", isCorrect: true },
@@ -42,6 +46,7 @@ const App = () => {
             ]
         },
         {
+            id: 5,
             Question: "What color is the fire ?",
             Answers: [
                 { Answer: "Blue", isCorrect: false },
