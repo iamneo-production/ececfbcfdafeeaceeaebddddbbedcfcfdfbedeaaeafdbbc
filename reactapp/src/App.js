@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 import { Banner } from './components/UI/Banner/Banner';
-import  Button from './components/UI/Button/Button';
+import Button from './components/UI/Button/Button';
 import './quizstyle.css'
 
 const App = () => {
@@ -52,61 +52,19 @@ const App = () => {
     ]
 
     //useState Hook
-   const [isStart, setIsStart] = useState(false);
-
-  const handleResultsButton = () => {
-      if(currentQuestion === 5){
-        setShowStart(true);
-      }
-  }  
-    
-   const handleQuizButton = () => {
-        setShowQuiz(true);
-    }
-
-const handleAnswerResponse=(isCorrect)=>
-{
-    if(isCorrect)
-    {
-        setScore(score+1);
-        setQuestionsCorrect(score+1);
-    }
-
-   const nextQuestion= currentQuestion+1;
-   if(nextQuestion<Questionbank.length)
-   {
-    setCurrentQuestion(nextQuestion);
-   }
-   else{
-    setShowScore(true);
-   }
-}
-const text = () => {
-    const nextQuestion= currentQuestion+1;
-    if(nextQuestion < Questionbank.length){
-      return "Show Results"
-    } else {                        
-     return "Start Quiz"
-    }
-      
-}
-
-const resetQuiz=()=>
-{
-    setCurrentQuestion(0);
-    setScore(0);
-    setShowScore(false);
-}
+    const [isStart, setIsStart] = useState(false);
 
     return (
-       {isStart ?
-        <div>
-        
+        <div className='app'>
+            {isStart ?
+                <div>
+                    <Card />
+                </div>
+                : <div>
+                    <h1>Quizz App</h1>
+                    <button onClick={()=> setIsStart(true)}>Start Quiz</button>
+                </div>}
         </div>
-        :  <div className='app'>
-       <h1>Quizz App</h1>
-       <button>Start Quiz</button>
-    </div>}
     );
 }
 
