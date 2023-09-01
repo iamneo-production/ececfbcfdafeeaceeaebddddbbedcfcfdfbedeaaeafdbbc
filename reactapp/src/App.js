@@ -44,8 +44,8 @@ const App = () => {
             Question: "What color is the fire ?",
             Answers: [
                 { Answer: "Blue", isCorrect: false },
-                { Answer: "Red", isCorrect: false },
-                { Answer: "Yellow", isCorrect: true },
+                { Answer: "Red", isCorrect: true },
+                { Answer: "Yellow", isCorrect: false },
                 { Answer: "Green", isCorrect: false }
             ]
         }
@@ -111,7 +111,7 @@ const resetQuiz=()=>
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+      
         </a>
             {showScore ? (
                 <div className='score-section'>

@@ -21,7 +21,7 @@ const CardData = () =>
 class Card extends React.Component{
     render(){
         return <>
-        <h4>What color is are the leaves ?</h4>
+        <h4>'What color is are the leaves ?'</h4>
         <button>Blue</button>
         <button>Red</button>
         <button>Yellow</button>
