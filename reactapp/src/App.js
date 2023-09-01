@@ -105,13 +105,6 @@ const resetQuiz=()=>
 
     return (
         <div className='app'>
-       <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-      
         </a>
             {showScore ? (
                 <div className='score-section'>
