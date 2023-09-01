@@ -1,3 +1,12 @@
-.App {
-  text-align: center;
+.app{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(15, 62, 15, 0.738);
+  height: 100vh;
+}
+
+.card{
+  display: ;
 }

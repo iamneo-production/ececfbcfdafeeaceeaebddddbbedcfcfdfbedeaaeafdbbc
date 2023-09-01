@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 import Card from './components/UI/Card/Card';
-import './quizstyle.css'
+import './App.css'
 
 const App = () => {
     const Questionbank = [
@@ -62,12 +62,12 @@ const App = () => {
     return (
         <div className='app'>
             {isStart ?
-                <p>Hello</p>
-                // <Card question={Questionbank[questions]} />
+
+                <Card question={Questionbank[questions]} />
 
                 : <div>
                     <h1>Quizz App</h1>
-                    <button onClick={() => alert("eee")}>Start Quiz</button>
+                    <button onClick={() => setIsStart(true)}>Start Quiz</button>
                 </div>}
         </div>
     );
