@@ -101,6 +101,7 @@ const resetQuiz=()=>
     return (
        {isStart ?
         <div>
+        
         </div>
         :  <div className='app'>
        <h1>Quizz App</h1>
