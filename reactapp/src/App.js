@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import Card from './components/UI/Card/Card';
 import './App.css'
 
@@ -74,7 +74,7 @@ const App = () => {
 
                 : <div>
                     <h1>Quizz App</h1>
-                    {questions}
+                    {questions>=5 ? `You have answered ${score}/5 Correctly` :undefined}
                     <button onClick={() => setIsStart(true)}>Start Quiz</button>
                 </div>}
         </div>
