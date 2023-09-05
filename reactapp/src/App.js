@@ -62,7 +62,7 @@ const App = () => {
     return (
         <div className='app'>
             {isStart ?
-
+                
                 <Card question={Questionbank[questions]} />
 
                 : <div>

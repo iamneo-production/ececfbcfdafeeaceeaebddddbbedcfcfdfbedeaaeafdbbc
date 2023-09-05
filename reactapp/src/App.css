@@ -9,5 +9,5 @@
 
 .card{
   display: flex;
-  fle
+  flex-direction: column;
 }
