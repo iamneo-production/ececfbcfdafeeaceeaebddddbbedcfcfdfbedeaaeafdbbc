@@ -2,6 +2,7 @@ import { React, useState, useEffect } from 'react';
 import Card from './components/UI/Card/Card';
 import './App.css'
 
+
 const App = () => {
     const Questionbank = [
         {
@@ -65,6 +66,11 @@ const App = () => {
             setIsStart(false);
         }
     })
+    const start = ()=>{
+        setIsStart(true);
+        setQuestions(0);
+        setScore(0);
+    }
 
     return (
         <div className='app'>
@@ -75,7 +81,7 @@ const App = () => {
                 : <div>
                     <h1>Quizz App</h1>
                     {questions>=5 ? `You have answered ${score}/5 Correctly` :undefined}
-                    <button onClick={() => setIsStart(true)}>Start Quiz</button>
+                    <button onClick={start}>Start Quiz</button>
                 </div>}
         </div>
     );
