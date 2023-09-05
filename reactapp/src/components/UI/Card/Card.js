@@ -1,27 +1,24 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../Button/Button";
 
 
-const Card = ({question}) => {
+const Card = ({ question }) => {
+    const [score, setScore] = useState(0);
 
-    const onClickHandler =()=>{
-console.log("first")
+    const onClickHandler = (answer) => {
+        if()
     }
 
-    useEffect(()=>{
-        console.log(question.Answers[0]);
-    })
-   
-return(
-    <div key = {question.id} className="card">
-        <h4>{question.Question}  </h4>
-        <Button children={question.Answers[0].Answer} />
-        <Button children={question.Answers[1].Answer} />
-        <Button children={question.Answers[2].Answer} />
-        <Button children={question.Answers[3].Answer} />
-        
-    </div>
-)
+    return (
+        <div key={question.id} className="card">
+            <h4>{question.Question}  </h4>
+            <Button children={question.Answers[0].Answer} onClickHandler={onClickHandler} answer={question.Answers[0].isCorrect} />
+            <Button children={question.Answers[1].Answer} onClickHandler={onClickHandler} answer={question.Answers[1].isCorrect} />
+            <Button children={question.Answers[2].Answer} onClickHandler={onClickHandler} answer={question.Answers[2].isCorrect} />
+            <Button children={question.Answers[3].Answer} onClickHandler={onClickHandler} answer={question.Answers[3].isCorrect} />
+
+        </div>
+    )
 }
 
-export default Card;
+export default Card;
