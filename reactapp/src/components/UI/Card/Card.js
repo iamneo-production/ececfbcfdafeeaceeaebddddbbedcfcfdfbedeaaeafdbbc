@@ -15,7 +15,7 @@ console.log("first")
 return(
     <div key = {question.id} className="card">
         <h4>{question.Question}  </h4>
-        <Button />
+        <Button children={question.Answers[0]} />
         <Button />
         <Button />
         <Button />
