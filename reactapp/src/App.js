@@ -58,15 +58,23 @@ const App = () => {
     //useState Hook
     const [isStart, setIsStart] = useState(false);
     const [questions, setQuestions] = useState(0);
+    const [score, setScore] = useState(0);
+
+    useEffect(()=>{
+        if(questions >=5){
+            setIsStart(false);
+        }
+    })
 
     return (
         <div className='app'>
-            {isStart ?
+            {isStart && questions<5 ?
                 
-                <Card question={Questionbank[questions]} />
+                <Card question={Questionbank[questions]} setQuestions={setQuestions} setScore={setScore} />
 
                 : <div>
                     <h1>Quizz App</h1>
+                    {questions}
                     <button onClick={() => setIsStart(true)}>Start Quiz</button>
                 </div>}
         </div>

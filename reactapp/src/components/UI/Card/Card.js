@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import Button from "../Button/Button";
 
 
-const Card = ({ question }) => {
-    const [score, setScore] = useState(0);
+const Card = ({ question, setQuestions, setScore }) => {
+    
 
     const onClickHandler = (answer) => {
-        if()
+        if(answer){
+            setScore(prev => prev+1);
+        }
+        setQuestions(prev => prev+1);
     }
 
     return (
