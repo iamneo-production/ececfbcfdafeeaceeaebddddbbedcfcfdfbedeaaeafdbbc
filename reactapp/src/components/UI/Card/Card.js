@@ -9,16 +9,17 @@ console.log("first")
     }
 
     useEffect(()=>{
-        console.log(question);
+        console.log(question.Answers[0]);
     })
    
 return(
     <div key = {question.id} className="card">
         <h4>{question.Question}  </h4>
-        <button >{question.Answers[0]}</button>
-        <Button />
-        <Button />
-        <Button />
+        <Button children={question.Answers[0].Answer} />
+        <Button children={question.Answers[1].Answer} />
+        <Button children={question.Answers[2].Answer} />
+        <Button children={question.Answers[3].Answer} />
+        
     </div>
 )
 }
